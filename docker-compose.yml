@@ -14,8 +14,8 @@ services:
       - elasticsearch
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/movies
-      - SPRING_DATASOURCE_USERNAME=movies_user
-      - SPRING_DATASOURCE_PASSWORD=movies_password
+      - SPRING_DATASOURCE_USERNAME=user
+      - SPRING_DATASOURCE_PASSWORD=1234
       - SPRING_ELASTICSEARCH_URIS=elasticsearch:9200
 
   db:
@@ -23,8 +23,8 @@ services:
     container_name: postgres_db
     environment:
       POSTGRES_DB: movies
-      POSTGRES_USER: movies_user
-      POSTGRES_PASSWORD: movies_password
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: 1234
     ports:
       - "5432:5432"
 
